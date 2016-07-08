@@ -3,7 +3,6 @@ package net.brainified.composition;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoMoreInteractions;
-import static org.mockito.Mockito.verifyZeroInteractions;
 import static org.mockito.Mockito.when;
 
 import org.junit.Test;
@@ -13,7 +12,6 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import net.brainified.FileReader;
-import net.brainified.composition.CachedFileReader;
 
 @RunWith(MockitoJUnitRunner.class)
 public class CachedFileReaderTest {
