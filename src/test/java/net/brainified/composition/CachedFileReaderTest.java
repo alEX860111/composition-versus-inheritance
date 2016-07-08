@@ -1,4 +1,4 @@
-package net.brainified;
+package net.brainified.composition;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.verify;
@@ -12,14 +12,17 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
+import net.brainified.FileReader;
+import net.brainified.composition.CachedFileReader;
+
 @RunWith(MockitoJUnitRunner.class)
-public class ComposedCachedFileReaderTest {
+public class CachedFileReaderTest {
 
   @Mock
   private FileReader readerMock;
 
   @InjectMocks
-  private ComposedCachedFileReader reader;
+  private CachedFileReader reader;
 
   @Test
   public void testReadFile() {

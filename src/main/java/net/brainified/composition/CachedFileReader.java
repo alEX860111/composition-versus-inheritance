@@ -1,4 +1,4 @@
-package net.brainified;
+package net.brainified.composition;
 
 import java.util.Map;
 
@@ -6,14 +6,16 @@ import javax.inject.Inject;
 
 import com.google.common.collect.Maps;
 
-final class ComposedCachedFileReader implements FileReader {
+import net.brainified.FileReader;
+
+final class CachedFileReader implements FileReader {
 
   private final Map<String, String> cache = Maps.newConcurrentMap();
 
   private final FileReader reader;
 
   @Inject
-  public ComposedCachedFileReader(final FileReader reader) {
+  public CachedFileReader(final FileReader reader) {
     this.reader = reader;
   }
 

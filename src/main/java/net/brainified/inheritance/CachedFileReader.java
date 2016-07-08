@@ -1,10 +1,12 @@
-package net.brainified;
+package net.brainified.inheritance;
 
 import java.util.Map;
 
 import com.google.common.collect.Maps;
 
-final class InheritedCachedFileReader extends SimpleFileReader {
+import net.brainified.SimpleFileReader;
+
+final class CachedFileReader extends SimpleFileReader {
 
   private final Map<String, String> cache = Maps.newConcurrentMap();
 
