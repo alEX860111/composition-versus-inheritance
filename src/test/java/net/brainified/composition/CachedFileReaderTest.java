@@ -28,8 +28,6 @@ public class CachedFileReaderTest {
   public void testReadFile() {
     when(readerMock.read("path/to/file")).thenReturn("content");
 
-    verifyZeroInteractions(readerMock);
-
     assertEquals("content", reader.read("path/to/file"));
     verify(readerMock).read("path/to/file");
 
